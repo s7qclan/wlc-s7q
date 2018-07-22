@@ -16,7 +16,7 @@ client.on('message', message => {
 const fs = require('fs');
 client.on("guildMemberAdd", member => {
       
-      const welcomer = member.guild.channels.find("name","s7q"); //اسم روم
+      const welcomer = member.guild.channels.find("name","ترحيب"); //اسم روم
                 
       var Canvas = require('canvas')
       var jimp = require('jimp')
@@ -87,7 +87,7 @@ client.on("guildMemberAdd", member => {
 
 const moment = require('moment');
 client.on("guildMemberAdd", member => {
-let welcomer = member.guild.channels.find("name","s7q");
+let welcomer = member.guild.channels.find("name","ترحيب");
       if(!welcomer) return;
       if(welcomer) {
          moment.locale('ar-ly');
@@ -125,7 +125,7 @@ client.on("ready", () => {
 
 
 client.on("guildMemberAdd", (member) => {
-    let channel = member.guild.channels.get("466346716984115250");// ايدي الروم
+    let channel = member.guild.channels.get("469591604445970443");// ايدي الروم
     if (!channel) {
         console.log("!channel fails");
         return;
@@ -142,7 +142,7 @@ client.on("guildMemberAdd", (member) => {
             var Inv = Invite.code;
             if (dat[Inv])
                 if (dat[Inv] < Invite.uses) {
- channel.send(`تم دعوته من قبل  ${Invite.inviter}`)            
+ channel.send(`**Invite by** ${Invite.inviter}`)            
  }
             dat[Inv] = Invite.uses;
         })
