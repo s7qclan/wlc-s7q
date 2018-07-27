@@ -87,7 +87,7 @@ client.on("guildMemberAdd", member => {
 
 const moment = require('moment');
 client.on("guildMemberAdd", member => {
-let welcomer = member.guild.channels.find("name","ترحيب");
+let welcomer = member.guild.channels.find("name","chat");
       if(!welcomer) return;
       if(welcomer) {
          moment.locale('ar-ly');
@@ -125,7 +125,7 @@ client.on("ready", () => {
 
 
 client.on("guildMemberAdd", (member) => {
-    let channel = member.guild.channels.get("471352490772922379");// ايدي الروم
+    let channel = member.guild.channels.get("471357078439591956");// ايدي الروم
     if (!channel) {
         console.log("!channel fails");
         return;
