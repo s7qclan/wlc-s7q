@@ -73,7 +73,7 @@ client.on("guildMemberAdd", member => {
                               ctx.fontSize = '28px';
                               ctx.fillStyle = "#FFFFFF";
                               ctx.textAlign = "center";
-   ctx.fillText(` ${member.guild.name} ` , 200, 190);
+   ctx.fillText(`  ` , 200, 190);
    
    
 
