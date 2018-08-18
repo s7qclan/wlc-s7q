@@ -16,7 +16,7 @@ client.on('message', message => {
 const fs = require('fs');
 client.on("guildMemberAdd", member => {
       
-      const welcomer = member.guild.channels.find("name","chat"); //اسم روم
+      const welcomer = member.guild.channels.find("name","s7q"); //اسم روم
                 
       var Canvas = require('canvas')
       var jimp = require('jimp')
@@ -87,7 +87,7 @@ client.on("guildMemberAdd", member => {
 
 const moment = require('moment');
 client.on("guildMemberAdd", member => {
-let welcomer = member.guild.channels.find("name","chat");
+let welcomer = member.guild.channels.find("name","s7q");
       if(!welcomer) return;
       if(welcomer) {
          moment.locale('ar-ly');
@@ -106,83 +106,7 @@ let welcomer = member.guild.channels.find("name","chat");
       });
 
 
- client.on("ready", () => {
 
-    var guild;
-
-    while (!guild)
-
-        guild = client.guilds.get("442919008715669505");
-
-    guild.fetchInvites().then((data) => {
-
-        data.forEach((Invite, key, map) => {
-
-            var Inv = Invite.code;
-
-            dat[Inv] = Invite.uses;
-
-        });
-
-    });
-
-});
-
- 
-
- 
-
- 
-
-client.on("guildMemberAdd", (member) => {
-
-    let channel = member.guild.channels.get("472320699214725131");
-
-    if (!channel) {
-
-        console.log("!the channel id it's not correct");
-
-        return;
-
-    }
-
-    if (member.id == client.user.id) {
-
-        return;
-
-    }
-
-    console.log('-');
-
-    var guild;
-
-    while (!guild)
-
-        guild = client.guilds.get("442919008715669505");
-
-    guild.fetchInvites().then((data) => {
-
-        data.forEach((Invite, key, map) => {
-
-            var Inv = Invite.code;
-
-            if (dat[Inv])
-
-                if (dat[Inv] < Invite.uses) {
-
- channel.send(`welcome To ${member.guild.name}\nتم دعوته بواسطة  ${Invite.inviter} `) ;       
-
- }
-
-            dat[Inv] = Invite.uses;
-
-       
-
-       });
-
-    });
-
-});
 
 
 
